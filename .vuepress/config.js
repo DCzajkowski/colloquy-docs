@@ -1,7 +1,7 @@
 module.exports = {
     title: 'Colloquy',
     description: 'A framework-agnostic package for managing persistent conversation contexts.',
-    base: '/colloquy-documentation/',
+    base: '/',
     head: [
         ['link', { rel: 'icon', type:'image/png', href: '/assets/img/favicon.png' }],
     ],
