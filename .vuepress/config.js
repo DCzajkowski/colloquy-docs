@@ -1,6 +1,7 @@
 module.exports = {
     title: 'Colloquy',
     description: 'A framework-agnostic package for managing persistent conversation contexts.',
+    base: '/colloquy-documentation/',
     head: [
         ['link', { rel: 'icon', href: '/colloquy-documentation/assets/img/favicon.png' }],
     ],
@@ -8,7 +9,6 @@ module.exports = {
         repo: '',
         docsRepo: 'dczajkowski/colloquy-docs',
         editLinks: true,
-        base: 'colloquy-documentation',
         docsDir: '',
         editLinkText: 'Edit this page on GitHub',
         sidebarDepth: 2,
