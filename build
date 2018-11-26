@@ -1,7 +1,0 @@
-#!/bin/bash
-
-vuepress build;
-for f in `find .vuepress/dist -type f | sed -n 's/.vuepress\///p'`;
-do
-    cp .vuepress/$f $f;
-done;
