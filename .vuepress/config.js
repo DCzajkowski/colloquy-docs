@@ -3,9 +3,10 @@ module.exports = {
     description: 'A framework-agnostic package for managing persistent conversation contexts.',
     base: '/colloquy-documentation/',
     head: [
-        ['link', { rel: 'icon', href: '/assets/img/favicon.png' }],
+        ['link', { rel: 'icon', type:'image/png', href: '/assets/img/favicon.png' }],
     ],
     themeConfig: {
+        logo: '/assets/img/logo-just-text.svg',
         repo: '',
         docsRepo: 'dczajkowski/colloquy-docs',
         editLinks: true,
