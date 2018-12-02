@@ -1,6 +1,10 @@
 ## Creating a custom driver
 
-### 1. Custom driver template
+### What is driver?
+
+Drivers are used to state the way in which you want to have your `context` stored. Our "basic" implementation offers you to store the data in the files or your local memory.
+
+### Driver template & examples
 
 In order to create a custom driver, make sure you work accordingly to a template in which those are created. In new custom driver implementation you must create a getter, setter, creator, remover and existance checker. 
 
@@ -35,9 +39,12 @@ class ConsoleDriver implements DriverInterface
     }
 }
 ```
-::: legend
+::: tip legend
+
 `string $id `   is an ID of the context
+
 `string $key`   is a key to retrieve the value by
+
 `string $value` is a value to be put 
 :::
 
