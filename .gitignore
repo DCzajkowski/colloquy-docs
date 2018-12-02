@@ -1,2 +1,5 @@
 .vuepress/dist
 dist
+.DS_Store
+.idea/workspace.xml
+node_modules

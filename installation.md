@@ -1,4 +1,4 @@
-## Instalation
+### Installation
 
 Colloquy can be installed using composer:
 ```bash
