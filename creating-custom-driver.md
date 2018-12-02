@@ -41,4 +41,4 @@ class ConsoleDriver implements DriverInterface
 `string $value` is a value to be put 
 :::
 
-To have a better glimpse on how the drivers look, you may check them [here](https://github.com/DCzajkowski/colloquy/blob/master/src/Drivers/)
+To have a better glimpse on how the drivers look, you may check live examples of them [here](https://github.com/DCzajkowski/colloquy/blob/master/src/Drivers/)
