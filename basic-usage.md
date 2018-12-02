@@ -2,7 +2,7 @@
 
 
 
-### 1. Adopt IdentifierResolver interface
+### Step 1. Adopt IdentifierResolver interface
 
 Colloquy needs to **distinguish data** stored in a `context` from each other,
 that's why under the hood it creates a `record` with given identifier.
@@ -30,7 +30,7 @@ class SessionIdentifierResolver implements \Colloquy\IdentifierResolverInterface
 }
 ```
 
-### 2. Create new context
+### Step 2. Create new context
 You create new `context` by binding!
 
 Every context should have:
@@ -59,7 +59,7 @@ Currently Colloquy supports drivers:
 );
 ```
 
-### 3. Use annotations
+### Step 3. Use annotations
 
 Colloquy introduces four types of annotations:
  - `@ColloquyContext(CONTEXT_NAME)` - **required, one**
