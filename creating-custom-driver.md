@@ -2,7 +2,7 @@
 
 ### What is driver?
 
-Drivers are used to state the way in which you want to have your `context` stored. Our "basic" implementation offers you to store the data in the files or your local memory.
+Drivers are used to state the way in which you want to have your `context` stored. Our implementation offers you to store the data in the files or your local memory.
 
 ### Driver template & examples
 
