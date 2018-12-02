@@ -39,7 +39,7 @@ class ConsoleDriver implements DriverInterface
     }
 }
 ```
-::: tip legend
+::: tip LEGEND
 
 `string $id `   is an ID of the context
 
