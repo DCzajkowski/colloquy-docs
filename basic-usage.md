@@ -1,20 +1,39 @@
 ## Using in auto-mode with annotations
 
-
-
 ### 1. Adopt IdentifierResolver interface
 
 Colloquy needs to **distinguish data** stored in a `context` from each other,
 that's why under the hood it creates a `record` with given identifier.
 You can think of the 'Identifier' as **unique** name of a save in a game.
 When you stop playing you save the game under certain name. When you come back you load save with the same name.
-Colloquy does the same. It computes the identifier in *get* method and stores data. 
-Later on, it computes identifer again and loads data corresponding to that identifier.
+Colloquy does the same. It computes both of the identifiers and stores data. 
+Later on, it computes identifiers again and loads data corresponding to that identifiers.
 
-::: warning
-`record` identifiers should be unique in a given `context`
-:::
+there are two types of identifiers:
+ * `context` identifiers
+ * `property` identifiers
 
+ :::tip
+ both of the identifiers have to match to properly 
+ save and load the same data
+ :::
+ 
+property identifier is unique within certain context
+
+`property identifier = some_prefix + property_name + class_name`
+
+
+You want to be able to store multiple Instances
+of the same property in the class, that's why you need 
+a class implementing IdentifierResolver interface.
+A *get* method of this class should return different `context` identifier depending on:
+ * session
+ * day
+ * cookies
+ * ...
+ 
+depending on your preference.
+ 
 **Example:** *store data per session*
 ```php
 <?php
@@ -30,13 +49,14 @@ class SessionIdentifierResolver implements \Colloquy\IdentifierResolverInterface
 }
 ```
 
-### 2. Create new context
-You create new `context` by binding!
+### 2. Create new context type
+You create new `context` type by binding!
 
-Every context should have:
+Every context type should have:
  - unique name 
  - Instance of a class implementing IdentifierResolverInterface 
  - Instance of a class implementing DriverInterface
+    
 
 Currently Colloquy supports drivers:
  1. `ConsoleDriver`
@@ -64,13 +84,18 @@ Currently Colloquy supports drivers:
 Colloquy introduces four types of annotations:
  - `@ColloquyContext(CONTEXT_NAME)` - **required, one**
  
-    tells Colloquy which `context` to use.
+    tells Colloquy which `context` type to use.
     Every property of this class with `@ColloquyPersist` will be autosaved
     
     
 - `@ColloquyPersist` - **required, at least one**
 
     tells Colloquy which class property to autosave.
+    
+    ::: tip
+    you can choose custom identifier using
+    `@ColloquyPersist(CUSTOM_NAME)`
+    :::
 
 - ```@ColloquyBegin```  - **required, at least one**
     
