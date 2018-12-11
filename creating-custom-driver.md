@@ -1,10 +1,10 @@
-## Creating a custom driver
+# Creating a custom driver
 
-### What is a driver?
+## What is a driver?
 
 Drivers are used to state the way in which you want to have your `context` stored. Our implementation offers you to store data in files or in memory, but you should feel free to create any other adapter as you wish.
 
-### Driver template & examples
+## Driver template & examples
 
 In order to create a custom driver you have to follow the `DriverInterface`. In new custom driver implementation you must create a getter, setter, creator, remover and existance checker.
 
